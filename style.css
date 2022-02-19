@@ -1,0 +1,88 @@
+@font-face{
+	font-family: 'Syne Tactile', cursive;
+}
+body{
+	font-family: 'Syne Tactile', cursive;
+	background-color: black;
+}
+
+.container{
+	position: relative;
+}
+h1{
+	position: absolute;
+	text-align: center;
+	z-index: 4;
+	margin-top: -20vh;
+	color: #e5b8fa;
+	font-size: 19vw;
+	text-shadow:
+      0 0 4px #e5b8fa,
+      0 0 7px #e5b8fa,
+      0 0 10px #f4e1fd,
+      0 0 13px #dafbe0,
+      0 0 15px #fff;
+	line-height: 200%;
+	pointer-events: none;
+}
+#car > img{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 3;
+	pointer-events: none;
+}
+#bike > img{
+	display: none;
+}
+iframe{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 2;
+	pointer-events: all;
+}
+.controller{
+  position: absolute;
+  top: 600px;
+  right: 600px;
+  z-index: 999;
+}
+
+@media all and (max-width:1370px){
+  iframe{
+  	width: 100%;
+  	height: 600px;
+  }
+  h1{
+  	margin-top: -12vh;
+  }
+}
+
+@media all and (max-width:640px){
+	#car > img{
+		display: none;
+	}
+  #bike > img{
+   display: block;
+   position: fixed;
+   z-index: 3;
+	 pointer-events: none;
+	 bottom: 0px;
+  }
+  iframe{
+  	height: 100vh;
+  }
+  h1{
+  	margin-top: -5vh;
+  }
+}
+
+
+
+
+
+
+
+
+
